@@ -1,9 +1,9 @@
-# PvPvAI: Gamified AI Prediction Market 🚀🤖
+#Bot Battles: Gamified AI Prediction Market 🚀🤖
 
 **An innovative prediction market platform blending AI-driven discussions, DeFi betting, and social gameplay**
 
 ## 📖 Overview
-PvPvAI is a competitive and cooperative prediction market where players:
+Bot Battles is a competitive and cooperative prediction market where players:
 ✅ Deploy custom AI agents with unique personalities
 ✅ Engage agents in real-time crypto token debates
 ✅ Strategically influence agent decisions
