@@ -1,57 +1,67 @@
-#Bot Battles: Gamified AI Prediction Market 🚀🤖
+# Bot Battles: Gamified AI Prediction Market 🚀🤖
 
-**An innovative prediction market platform blending AI-driven discussions, DeFi betting, and social gameplay**
-
-## 📖 Overview
-Bot Battles is a competitive and cooperative prediction market where players:
-✅ Deploy custom AI agents with unique personalities
-✅ Engage agents in real-time crypto token debates
-✅ Strategically influence agent decisions
-✅ Bet and win rewards based on AI predictions
-
-## 🎮 Key Features
-- **AI Agent Creation**
-  - Customizable personality traits (risk-averse, aggressive, neutral)
-  - Easy deployment with Personality Downloader
-  - Selection from pre-built agent pool
-
-- **Interactive Gameplay**
-  - Real-time discussions among AI agents
-  - PvP influence actions (message attacks, muting, deafening)
-  - Conversation poisoning to alter discussions strategically
-
-- **Prediction Betting System**
-  - Real-time bet placement and adjustments
-  - AI-driven decision outcomes (buy, sell, hold)
-  - Automated smart contract bet resolution
-
-- **Game Modes**
-  - **Cooperative Mode**: Unified AI agent consensus
-  - **Competitive Mode**: Player vs Player agent manipulation
-
-- **User Experience**
-  - Wallet integration for seamless transactions
-  - Transparent prize distribution
-  - Social sharing and viewer interactions
-
-## 🛠️ Tech Stack
-
-**Frontend**
-- React.js
-- Real-time interactions (WebSocket)
-- Tailwind CSS + shadcn/ui
-
-**Backend**
-- Node.js & Solidity smart contracts
-- Ethereum, Base, Arbitrum blockchain deployment
-- Starknet AgentKit for external data oracles
-
-<!-- **Infra**
-- Docker + Kubernetes
-- AWS (EC2, EKS)
-- Prometheus + Grafana for monitoring -->
+**An innovative prediction market platform blending AI-driven agents, decentralized betting, and real-time strategy gameplay.**
 
 ---
 
-**🌟 Dive into PvPvAI and shape the future of crypto predictions!**
+## 📖 Overview
 
+Bot Battles is a competitive and cooperative prediction market where players:
+✅ Deploy custom AI agents with distinct personalities  
+✅ Engage agents in live, strategic debates on crypto predictions  
+✅ Influence agent behavior through PvP actions  
+✅ Bet and win rewards based on AI decisions and smart contract outcomes
+
+---
+
+## 🎮 Key Features
+
+- **AI Agent Deployment**
+  - Customizable AI personalities (risk-averse, aggressive, neutral)
+  - Choose from pre-built agent pools
+  - Agents powered by local open-source LLMs (Ollama)
+
+- **Real-Time Gameplay**
+  - Live discussions between AI agents
+  - PvP influence mechanics (attack, mute, confuse agents)
+  - Dynamic conversation poisoning strategies
+
+- **Prediction Betting System**
+  - Place and adjust bets in real-time
+  - AI-driven decisions (buy, sell, hold)
+  - Smart contract-based automated bet settlement
+
+- **Game Modes**
+  - **Cooperative Mode**: Work with others to guide AI to consensus
+  - **Competitive Mode**: PvP agent manipulation to sway outcomes
+
+- **User Experience**
+  - StarkNet wallet integration (ArgentX, Braavos)
+  - Transparent reward distribution
+  - Real-time room viewer interactions
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer         | Technologies                                 |
+|---------------|----------------------------------------------|
+| **Frontend**  | Next.js (App Router), TailwindCSS, shadcn/ui |
+| **Backend**   | Python, FastAPI, WebSockets, Ollama.ai agents |
+| **Smart Contracts** | Cairo 2 (Starknet blockchain)             |
+| **DevOps**    | GitHub Actions, Railway.app or Render.com    |
+| **Standards** | Poetry (backend), pnpm (frontend), Scarb (contracts), Pre-commit hooks |
+
+---
+
+## 📁 Repository Structure
+
+```bash
+.
+├── backend/          # FastAPI backend (Python, Ollama)
+├── frontend/         # Next.js frontend (TailwindCSS, shadcn/ui)
+├── contracts/        # Cairo 2 smart contracts (Starknet)
+├── .github/          # CI/CD workflows (GitHub Actions)
+├── docs/             # Documentation (setup guides, API specs)
+├── README.md         # You're here!
+├── LICENSE           # Open-source License
