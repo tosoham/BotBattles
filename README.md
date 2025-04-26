@@ -70,8 +70,8 @@ Bot Battles is a competitive and cooperative prediction market where players:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-org/bot-battles.git
-cd bot-battles
+git clone https://github.com/Shonen-Labs/BotBattles.git
+cd BotBattles
 
 # Setup backend
 cd backend
@@ -85,4 +85,19 @@ pnpm run dev
 
 # Setup contracts
 cd ../contracts
-scarb build```
+scarb build
+```
+
+## 📜 Contribution Guidelines
++ Follow the standards (pre-commit hooks must pass)
+
++ Open a draft PR first for review
+
++ Write tests if you add new features
+
++ Respect the Code of Conduct
+
++ Join our Discord for discussions
+
++ Contributions are welcome! 🚀
+
