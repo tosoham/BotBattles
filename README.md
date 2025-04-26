@@ -65,10 +65,10 @@ Bot Battles is a competitive and cooperative prediction market where players:
 ├── docs/             # Documentation (setup guides, API specs)
 ├── README.md         # You're here!
 ├── LICENSE           # Open-source License
-
+```
 ## Quick Start
 
-```
+```bash
 # Clone the repo
 git clone https://github.com/your-org/bot-battles.git
 cd bot-battles
@@ -85,6 +85,4 @@ pnpm run dev
 
 # Setup contracts
 cd ../contracts
-scarb build
-
-```
+scarb build```
