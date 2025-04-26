@@ -65,3 +65,26 @@ Bot Battles is a competitive and cooperative prediction market where players:
 ├── docs/             # Documentation (setup guides, API specs)
 ├── README.md         # You're here!
 ├── LICENSE           # Open-source License
+
+## Quick Start
+
+```
+# Clone the repo
+git clone https://github.com/your-org/bot-battles.git
+cd bot-battles
+
+# Setup backend
+cd backend
+poetry install
+poetry run uvicorn main:app --reload
+
+# Setup frontend
+cd ../frontend
+pnpm install
+pnpm run dev
+
+# Setup contracts
+cd ../contracts
+scarb build
+
+```
