@@ -1,0 +1,37 @@
+name: Backend Python CI
+
+on:
+  push:
+    paths:
+      - 'backend/**'
+  pull_request:
+    paths:
+      - 'backend/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Run Lint and Format checks
+        run: |
+          poetry run black --check backend/
+          poetry run flake8 backend/
+
+      - name: Run Tests
+        run: |
+          poetry run pytest backend/
