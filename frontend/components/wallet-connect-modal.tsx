@@ -69,11 +69,9 @@ export function WalletConnectModal({
   const getWalletIcon = (id: string) => {
     switch (id.toLowerCase()) {
       case "argentx":
-        return "/placeholder.svg?height=40&width=40&text=ArgentX";
+        return "/argent-x-logo.webp";
       case "braavos":
-        return "/placeholder.svg?height=40&width=40&text=Braavos";
-      default:
-        return "/placeholder.svg?height=40&width=40";
+        return "/braavos-logo.webp";
     }
   };
 
@@ -82,7 +80,7 @@ export function WalletConnectModal({
     {
       name: "ArgentX",
       description: "The most popular Starknet wallet",
-      icon: "/placeholder.svg?height=40&width=40&text=ArgentX",
+      icon: "/argent-x-logo.webp",
       url: "https://www.argent.xyz/argent-x/",
       chromeUrl:
         "https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb",
@@ -91,7 +89,7 @@ export function WalletConnectModal({
     {
       name: "Braavos",
       description: "A secure and user-friendly Starknet wallet",
-      icon: "/placeholder.svg?height=40&width=40&text=Braavos",
+      icon: "/braavos-logo.webp",
       url: "https://braavos.app/",
       chromeUrl:
         "https://chrome.google.com/webstore/detail/braavos-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma",
@@ -163,10 +161,7 @@ export function WalletConnectModal({
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-none overflow-hidden bg-gray-900 flex items-center justify-center">
                             <Image
-                              src={
-                                getWalletIcon(connector.id || "") ||
-                                "/placeholder.svg?height=40&width=40"
-                              }
+                              src={getWalletIcon(connector.id || "") as string}
                               alt={connector.name || "Wallet"}
                               width={40}
                               height={40}
