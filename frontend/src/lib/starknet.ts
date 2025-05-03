@@ -1,4 +1,4 @@
-import type { Agent } from "@/types/betting";
+import { Agent } from "../types/betting";
 
 // Mock agents data
 const mockAgents: Agent[] = [

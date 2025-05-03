@@ -2,8 +2,8 @@
 
 import { useState, useCallback } from "react";
 import { useAccount } from "@starknet-react/core";
-import type { Transaction } from "@/types/betting";
-import { placeBet as placeBetOnChain } from "@/lib/starknet";
+import { Transaction } from "../types/betting";
+import { placeBet as placeBetOnChain } from "../lib/starknet";
 
 export function useBetting() {
   const { address } = useAccount();

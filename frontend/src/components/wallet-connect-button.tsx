@@ -7,11 +7,11 @@ import {
   useDisconnect,
   type Connector,
 } from "@starknet-react/core";
-import { WalletConnectModal } from "./wallet-connect-modal";
 import { Wallet } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 import { WalletDropdown } from "./wallet-dropdown";
 import { truncateAddress } from "@/utils/wallet";
+import WalletConnectModal from "./wallet-connect-modal";
 
 export function WalletConnectButton() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -123,11 +123,21 @@ export function WalletConnectButton() {
       {/* Wallet Connect Modal */}
       <WalletConnectModal
         isOpen={isModalOpen}
-        onClose={() => !isConnecting && setIsModalOpen(false)}
-        connectors={connectors || []}
-        onSelect={handleConnectorSelect}
-        isConnecting={isConnecting}
-        connectionError={connectionError}
+        onClose={() => {
+          if (!isConnecting) {
+            setIsModalOpen(false);
+            setConnectionError(null);
+          }
+        }}
+        onSelect={async (walletId) => {
+          const connector = connectors.find((c) => c.id === walletId);
+          if (connector) {
+            await handleConnectorSelect(connector);
+          }
+        }}
+        // connectors={connectors }
+        // isConnecting={isConnecting}
+        // connectionError={connectionError}
       />
 
       {/* Wallet Dropdown */}

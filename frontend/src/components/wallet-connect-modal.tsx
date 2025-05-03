@@ -15,37 +15,21 @@ import {
 interface WalletConnectModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSelect: (wallet: string) => void;
+  onSelect: (wallet: string) => void; // Added this prop
 }
 
 export default function WalletConnectModal({
   isOpen,
   onClose,
+  onSelect, // Added this prop
 }: WalletConnectModalProps) {
   const [selectedWallet, setSelectedWallet] = useState<string | null>(null);
-  const { connectors, connectAsync } = useWalletContext();
+  const { connectors } = useWalletContext(); 
 
   const handleSelect = (walletId: string) => {
     setSelectedWallet(walletId);
   };
 
-  // ② On confirm, look up the connector object and call connectWallet
-  const handleConfirm = async () => {
-    if (!selectedWallet) return;
-
-    const connector = connectors.find((c) => c.id === selectedWallet);
-    if (!connector) {
-      console.error("Connector not found:", selectedWallet);
-      return;
-    }
-
-    try {
-      await connectAsync({ connector }); // ■ await the wallet prompt
-      onClose();
-    } catch (err) {
-      console.error("Wallet connection failed:", err); // ■ handle rejections
-    }
-  };
 
   // helper to get icon source
   function getIconSource(
@@ -116,10 +100,14 @@ export default function WalletConnectModal({
                   ))}
                 </div>
 
-                {/* ③ Confirmation button */}
+                {/* Connect button now triggers onSelect */}
                 <AnimationWrapper variant="slideUp" delay={0.3}>
                   <button
-                    onClick={handleConfirm}
+                    onClick={() => {
+                      if (selectedWallet) {
+                        onSelect(selectedWallet);
+                      }
+                    }}
                     disabled={!selectedWallet}
                     className={`w-full py-3 rounded-sm font-mono border-primary-green border transition-all outline-none duration-300 ${
                       selectedWallet

@@ -1,4 +1,4 @@
-import BettingInterface from "@/components/betting-interface";
+import BettingInterface from "../../components/betting-interface";
 
 export default function Home() {
   return (
