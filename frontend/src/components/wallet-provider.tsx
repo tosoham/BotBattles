@@ -12,7 +12,7 @@ import {
   useAccount,
   useDisconnect,
   Connector,
-  ConnectVariables
+  ConnectVariables,
 } from "@starknet-react/core";
 
 interface WalletContextProps {
@@ -44,7 +44,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
     (connector: Connector) => {
       connect({ connector });
     },
-    [connect]
+    [connect],
   );
 
   // Save wallet address to localStorage when connected
@@ -70,7 +70,6 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
     </WalletContext.Provider>
   );
 };
-
 
 export const useWalletContext = () => {
   const ctx = useContext(WalletContext);

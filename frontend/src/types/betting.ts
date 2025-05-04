@@ -2,7 +2,7 @@ export type Agent = {
   id: number;
   name: string;
   image: string;
-  performance: number; 
+  performance: number;
 };
 
 export type Transaction = {

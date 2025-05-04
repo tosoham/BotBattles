@@ -42,8 +42,8 @@ export function useBetting() {
                   message: `Successfully placed bet of ${amount} STRK on agent #${agentId}`,
                   timestamp: Date.now(),
                 }
-              : tx
-          )
+              : tx,
+          ),
         );
 
         return result;
@@ -62,8 +62,8 @@ export function useBetting() {
                   }`,
                   timestamp: Date.now(),
                 }
-              : tx
-          )
+              : tx,
+          ),
         );
 
         throw error;
@@ -71,7 +71,7 @@ export function useBetting() {
         setIsLoading(false);
       }
     },
-    [address]
+    [address],
   );
 
   return {
