@@ -3,7 +3,7 @@ name: Contracts CI
 on:
   push:
     paths:
-      - 'contracts/**'   # Only trigger when contracts change
+      - 'contracts/**'  
     branches: [main, develop]
   pull_request:
     paths:
@@ -13,33 +13,33 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./contracts  
     steps:
-      - uses: actions/checkout@v4   # Updated to v4 (latest)
+      - uses: actions/checkout@v4   
       
-      # Install Scarb (Cairo package manager)
       - uses: software-mansion/setup-scarb@v1
         with:
-          scarb-version: "2.11.3"   # Pinned version
-      
-      # Install Starknet Foundry (snforge)
+          scarb-version: "2.11.3"   
+     
       - uses: foundry-rs/setup-snfoundry@v3
         with:
-          starknet-foundry-version: "0.39.0"   # Pinned version
+          starknet-foundry-version: "0.39.0"   
       
-      # Verify installations
+      
       - name: Check Versions
         run: |
           scarb --version
           snforge -V
       
-      # Format check (similar to Rust's `cargo fmt`)
+      
       - name: Format Check
         run: scarb fmt --check
       
-      # Run Starknet tests
+  
       - name: Run Tests
         run: snforge test
       
-      # Build the project (compile Cairo code)
       - name: Build Project
         run: scarb build
