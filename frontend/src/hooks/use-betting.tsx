@@ -23,7 +23,7 @@ export function useBetting() {
         const pendingTx: Transaction = {
           hash: "pending-" + Date.now(),
           status: "pending",
-          message: `Placing bet of ${amount} ETH on agent #${agentId}...`,
+          message: `Placing bet of ${amount} STRK on agent #${agentId}...`,
           timestamp: Date.now(),
         };
 
@@ -39,7 +39,7 @@ export function useBetting() {
               ? {
                   hash: result.transactionHash,
                   status: "confirmed",
-                  message: `Successfully placed bet of ${amount} ETH on agent #${agentId}`,
+                  message: `Successfully placed bet of ${amount} STRK on agent #${agentId}`,
                   timestamp: Date.now(),
                 }
               : tx

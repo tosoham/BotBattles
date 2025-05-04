@@ -135,9 +135,6 @@ export function WalletConnectButton() {
             await handleConnectorSelect(connector);
           }
         }}
-        // connectors={connectors }
-        // isConnecting={isConnecting}
-        // connectionError={connectionError}
       />
 
       {/* Wallet Dropdown */}

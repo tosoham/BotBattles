@@ -125,7 +125,7 @@ export default function BettingInterface() {
 
                   <div className="mb-4">
                     <label className="block mb-2 font-pixel text-gray-300">
-                      Bet Amount (ETH)
+                      Bet Amount (STRK)
                     </label>
                     <div className="flex items-center gap-4">
                       <input
