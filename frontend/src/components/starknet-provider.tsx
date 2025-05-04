@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import { sepolia} from "@starknet-react/chains";
+import { sepolia } from "@starknet-react/chains";
 import {
   StarknetConfig,
   argent,

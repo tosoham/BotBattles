@@ -35,7 +35,7 @@ export async function getAgents(): Promise<Agent[]> {
 // Place a bet on an agent
 export async function placeBet(
   agentId: number,
-  amount: string
+  amount: string,
 ): Promise<{ transactionHash: string }> {
   // In a real implementation, this would call the StarkNet contract
 

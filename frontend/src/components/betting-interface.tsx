@@ -106,8 +106,8 @@ export default function BettingInterface() {
                             agent.performance > 66
                               ? "bg-green-400"
                               : agent.performance > 33
-                              ? "bg-yellow-400"
-                              : "bg-red-400"
+                                ? "bg-yellow-400"
+                                : "bg-red-400"
                           } rounded-full`}
                           style={{ width: `${agent.performance}%` }}
                         />
@@ -190,8 +190,8 @@ export default function BettingInterface() {
                         tx.status === "confirmed"
                           ? "border-green-400 bg-gray-600"
                           : tx.status === "failed"
-                          ? "border-red-400 bg-gray-600"
-                          : "border-yellow-400 bg-gray-600"
+                            ? "border-red-400 bg-gray-600"
+                            : "border-yellow-400 bg-gray-600"
                       }`}
                     >
                       <div className="flex items-start gap-3">
@@ -212,8 +212,8 @@ export default function BettingInterface() {
                               {tx.status === "pending"
                                 ? "Processing..."
                                 : tx.status === "confirmed"
-                                ? "Confirmed"
-                                : "Failed"}
+                                  ? "Confirmed"
+                                  : "Failed"}
                             </p>
                             <p className="text-xs text-gray-300 font-pixel">
                               {new Date(tx.timestamp).toLocaleTimeString()}

@@ -24,16 +24,15 @@ export default function WalletConnectModal({
   onSelect, // Added this prop
 }: WalletConnectModalProps) {
   const [selectedWallet, setSelectedWallet] = useState<string | null>(null);
-  const { connectors } = useWalletContext(); 
+  const { connectors } = useWalletContext();
 
   const handleSelect = (walletId: string) => {
     setSelectedWallet(walletId);
   };
 
-
   // helper to get icon source
   function getIconSource(
-    icon: string | { dark: string; light: string }
+    icon: string | { dark: string; light: string },
   ): string {
     if (typeof icon === "string") {
       return icon;
