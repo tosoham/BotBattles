@@ -54,7 +54,7 @@ export default function BettingInterface() {
     <div className="flex flex-col">
       <header className="flex items-center justify-between mb-8 py-4 border-b border-gray-500">
         <h1 className="text-3xl font-bold text-green-400 font-pixel tracking-wider">
-          PVPVAI ARENA
+          BOTBATTLES ARENA
         </h1>
         <WalletConnectButton />
       </header>
